@@ -25,17 +25,17 @@ A root user has its own home directory. This directory can be different in diffe
 * /lib shared lib that execs from /bin or /sbin use
 * /usr was used for user home dir (histroic reasons due to storage limitations)
 * /usr/local programs that YOU install on computer (3rd party apps) available for all users
-* /opt 3rd party programs you install that DONT split its components
+* /opt 3rd party programs you install that DONT split its components. Ex. IDE, web browsers.
 * /boot files required for booting
 * /etc system config
 * /dev device files (webcam, mouse, keyboard etc)
 * /var stores logs
 * /var/cache
 * /tmp temporary resources required for processes
-* /media removable media
+* /media removable media. Ex. USB
 * /mnt temporary mount points
 
-Hidden files (starts with a dot)
+Hidden files (starts with a dot) -  called dotfiles. Prevents important data to accidentally be deleted.
 
 ### Commands
 
