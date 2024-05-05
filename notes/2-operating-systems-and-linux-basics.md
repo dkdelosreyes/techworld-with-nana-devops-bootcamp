@@ -37,36 +37,48 @@ A root user has its own home directory. This directory can be different in diffe
 
 Hidden files (starts with a dot) -  called dotfiles. Prevents important data to accidentally be deleted.
 
+### CLI
+nana@nana-ubuntu:~$
+  - nana - username
+  - nana-ubuntu - computer name
+  - ~ - home directory indicator
+  - $ - represent regular user. Not a superuser. Root user will have a #(pound) sign
+
 ### Commands
 
-* pwd = show current dir
+* pwd = show current dir. Stands for print working directory.
 * ls = list contents
 * cd = change dir (cd / = change to root dir and empty cd is go to home)
 * mkdir = make dir
 * touch = create file
 * rm = delete file
-* rm -r = delete non-empty dir with files in it
+* rm -r = delete non-empty dir with files in it. -r stands for recursive
 * rmdir = delete empty dir
 * clear = clears terminal
 * mv <old-name> <new-name> = rename file to new name
 * cp -r <dir> <new-dir> = copy contents folder to new folder
 * ls -R = list all folders and files in each
+* ctrl + r = Search history. Search the commands you executed before rather than using up down arrows
+* ctrl + c = Stop currently executing command
 * history = lists all recent cmd in terminal
+* history <number> = ex. history 20, displays last 20 executed commands
+* ctlr + shift + v = paste copied text to terminal
 * ls -a = display hidden files
 * ls -l = print files in long list format (ls -la for listing hidden files)
-* cat = show contents file
+* cat = show contents file. Stands for concatenate
 * uname -a = show system & kernel
 * cat /etc/os-release = show release version
 * lscpu = cpu info
 * lsmem = memory info
 * sudo = grants super user privileges for cmd
-* su - <username> = become user
+* su - <username> = become/login as user
 * | = pipe, passes output of one cmd as input of next cmd
 * <input> | less = displays reader friendly format for info in CLI
 * <input> | grep <pattern> = filter input based on pattern search
 *  > = redirect, takes output from previous cmd and sends it to file that you give (overrides contents file)
 * > > = appends text to end of file
 * > > Can pass multiple cmd in one line separated by ;
+* .bash_history = where all commands are stored
 
 ### Package manager: APT
 
