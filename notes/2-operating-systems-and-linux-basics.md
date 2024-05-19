@@ -76,12 +76,36 @@ Downloads, installs or updates existing software from repo
 Knows where to put all files in system
 
 ```apt search <package name>```
+  - to search a specific package. You  could also type a command like `java`, it will show not found but it will show suggestion on how to install t using apt
 ```apt install <package name>```
 ```apt remove <package name>```
 ```apt update```
+  - will update the package index which is actually a database. Pulls the latest changes from APT repo. This is executed in freshly installed OS.
+  - /etc/atp/sources.list -  contains the list of repo link which uses by apt to get the packages to install
 ```apt upgrade```
 ```apt autoremove```
 ```apt full-upgrade```
+
+Alternative ways to install a package if not available in package manager
+  - reason why it won't be available is sometimes it takes time for these package updates to get verified to be incldued in the repo.
+  1. Alternative: Ubuntu Software Center - app name: Ubuntu Software
+  2. Alternative: snap package manager - app name: Snappy. Terminal command `snap`
+     Snap vs APT:
+       Snap:
+         - install packages as self contained package including dependencies
+         - supports universal linux package `.snap`
+         - automatic updates
+         - larger installation size. If you install 50 packages with the same dependencies, it will also install the same dependencies 50x since snap is just a single package.
+       Apt:
+         - install package in separate folders which is recommended way. So if it is available in `apt`, better to use this one instead.
+         - only supports specific linux distribution `.dep`
+         - manual updates
+         - smaller installation size
+         - dependencies are shared across installation
+  3. Alternative: Add repository to official list of repos
+     - command: `add-apt-repository`
+     - adds repository to `/etc/atp/sources.list`
+     - PPA "Personal Package Archive" - personal repos provided by community. Risky and wont ensure quality and security. Might create difficulty when upgrading ubuntu. Needs to do a background check first who is maintaining the software to ensure trustworthiness.
 
 ### VIM text editor
 
